@@ -1,10 +1,7 @@
 FROM tomcat:9.0
 
-# Remove default apps (optional but recommended)
-RUN rm -rf /usr/local/tomcat/webapps/*
-
 # Copy your WAR file into Tomcat
-COPY your-app.war /usr/local/tomcat/webapps/ROOT.war
+COPY hello-world-war-1.0.0.war /usr/local/tomcat/webapps/
 
 # Expose port
 EXPOSE 8080
