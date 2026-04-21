@@ -41,10 +41,7 @@ jobs:
           script: |
             sudo systemctl stop tomcat
 
-            sudo rm -f /opt/tomcat/webapps/*.war
-            sudo rm -rf /opt/tomcat/webapps/JAVA
-
-            sudo mv /home/ec2-user/deploy-temp/*.war /opt/tomcat/webapps/JAVA.war
+            sudo mv /home/ec2-user/deploy-temp/target/*.war /opt/tomcat/webapps/JAVA.war
 
             sudo chown tomcat:tomcat /opt/tomcat/webapps/JAVA.war
 
